@@ -1,0 +1,58 @@
+body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 600px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-group label {
+      margin-bottom: 5px;
+    }
+
+    .input-group input, .input-group select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .product-list {
+      margin-top: 20px;
+    }
+
+    .product-list h2 {
+      margin-bottom: 10px;
+    }
+
+    .product-list table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .product-list th, .product-list td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .product-list th {
+      background-color: #f2f2f2;
+    }
+
+    .product-list button {
+      margin-top: 10px;
+    }
+
+    .lowest-cost {
+      margin-top: 20px;
+      font-weight: bold;
+    }
