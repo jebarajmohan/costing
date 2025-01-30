@@ -34,7 +34,7 @@ const products = [];
         // Update existing product
         products[selectedProductIndex] = newProduct;
         const rows = productTableBody.querySelectorAll('tr');
-         if (selectedProductIndex < rows.length) {
+        if (selectedProductIndex < rows.length) {
           const row = rows[selectedProductIndex];
           row.cells[0].textContent = newProduct.name;
           row.cells[1].textContent = `₹${newProduct.price}`;
@@ -155,12 +155,11 @@ const products = [];
     function updateCartTotal() {
       const cartTotalQuantityElement = document.getElementById('cartQuantity');
       const cartTotalPriceElement = document.getElementById('cartPrice');
-      let totalQuantity = 0;
+      let totalProducts = cart.length;
       let totalPrice = 0;
       for (const product of cart) {
-        totalQuantity += product.quantity;
         totalPrice += product.price;
       }
-      cartTotalQuantityElement.textContent = totalQuantity;
+      cartTotalQuantityElement.textContent = totalProducts;
       cartTotalPriceElement.textContent = `₹${totalPrice.toFixed(2)}`;
     }
