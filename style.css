@@ -1,0 +1,144 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 1.8em;
+      font-weight: 700;
+      font-family: 'Roboto Slab', serif;
+      color: #e0f7fa;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-group label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .input-group input, .input-group select {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .product-list {
+      margin-top: 20px;
+    }
+
+    .product-list h2 {
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+
+    .product-list table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      font-size: 0.9em;
+    }
+
+    .product-list th, .product-list td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .product-list th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    .product-list tr.lowest-cost-row {
+      background-color: #ccf2d1;
+      border: 2px solid #28a745;
+    }
+
+    .remove-button {
+      background: none;
+      border: none;
+      color: #dc3545;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 0;
+    }
+
+    .cart {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .input-row {
+        grid-template-columns: 1fr;
+      }
+
+      .product-list table {
+        font-size: 0.8em;
+      }
+
+      .product-list th, .product-list td {
+        padding: 6px;
+      }
+    }

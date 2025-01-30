@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Price Comparison App</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <header>
+        <h1 class="logo">Price Comparator</h1>
+      </header>
+      <div class="container">
+        <div class="input-row">
+          <div class="input-group">
+            <label>Price per item:</label>
+            <input type="number" id="price" placeholder="Enter price" step="any" min="0">
+          </div>
+          <div class="input-group">
+            <label>Quantity:</label>
+            <input type="number" id="quantity" placeholder="Enter quantity" min="0">
+          </div>
+        </div>
+         <div class="input-row">
+          <div class="input-group">
+            <label>Unit:</label>
+            <select id="unit">
+              <option value="gms" selected>gms</option>
+              <option value="kg">kg</option>
+              <option value="ml">ml</option>
+              <option value="ltr">ltr</option>
+              <option value="Count">Count</option>
+            </select>
+          </div>
+           <div class="input-group">
+            <label>Product Name:</label>
+            <input type="text" id="productName" placeholder="Enter product name">
+          </div>
+        </div>
+        <button onclick="addProduct()">Add Product</button>
+
+        <div class="product-list">
+          <h2>Product List</h2>
+          <table id="productTable">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Add to Cart</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <p id="noProductsMessage" style="display:none;">No products added yet.</p>
+          <button onclick="clearComparison()">Clear</button>
+        </div>
+        <div class="cart">
+          <h2>Cart</h2>
+          <p>Total Quantity: <span id="cartQuantity">0</span></p>
+          <p>Total Price: <span id="cartPrice">₹0</span></p>
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </body>
+    </html>
