@@ -141,10 +141,19 @@ const products = [];
     function clearComparison() {
       const productTableBody = document.querySelector('#productTable tbody');
       const noProductsMessage = document.getElementById('noProductsMessage');
+      const priceInput = document.getElementById('price');
+      const quantityInput = document.getElementById('quantity');
+      const unitInput = document.getElementById('unit');
+      const productNameInput = document.getElementById('productName');
 
       products.length = 0;
       productTableBody.innerHTML = '';
       noProductsMessage.style.display = products.length === 0 ? 'block' : 'none';
+      priceInput.value = '';
+      quantityInput.value = '';
+      unitInput.value = 'gms';
+      productNameInput.value = '';
+      selectedProductIndex = -1;
     }
 
     function addToCart(product) {
@@ -155,11 +164,20 @@ const products = [];
     function updateCartTotal() {
       const cartTotalQuantityElement = document.getElementById('cartQuantity');
       const cartTotalPriceElement = document.getElementById('cartPrice');
+      const cartItemsElement = document.getElementById('cartItems');
       let totalProducts = cart.length;
       let totalPrice = 0;
+
+      cartItemsElement.innerHTML = ''; // Clear previous cart items
+
       for (const product of cart) {
         totalPrice += product.price;
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.textContent = `${product.name} - ₹${product.price} - ${product.quantity} ${product.unit}`;
+        cartItemsElement.appendChild(cartItem);
       }
+
       cartTotalQuantityElement.textContent = totalProducts;
       cartTotalPriceElement.textContent = `₹${totalPrice.toFixed(2)}`;
     }
